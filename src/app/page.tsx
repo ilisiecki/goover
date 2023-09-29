@@ -1,10 +1,10 @@
-import { MaxWidthWrapper } from "@/components/layout/max-width-wrapper";
 import Balancer from "react-wrap-balancer";
-import { ArrowRight } from "lucide-react";
-
-import Link from "next/link";
+import { ArrowRightIcon } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { MaxWidthWrapper } from "@/components/layout/max-width-wrapper";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,7 +32,7 @@ export default function Home() {
           className={buttonVariants({ size: "lg" })}
         >
           <span className="pr-2">Get started</span>
-          <ArrowRight className="h-5 w-5" />
+          <ArrowRightIcon className="h-5 w-5" />
         </Link>
       </MaxWidthWrapper>
 
