@@ -9,8 +9,6 @@ export default function AuthCallback() {
   const searchParams = useSearchParams();
   const origin = searchParams.get("origin");
 
-  const { data } = trpc.test.useQuery();
-
   trpc.authCallback.useQuery(undefined, {
     onSuccess: ({ succuess }) => {
       if (succuess) {

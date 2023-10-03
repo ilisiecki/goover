@@ -12,6 +12,27 @@ datasource db {
 }
 
 model User {
-  id String @id @unique
+  id    String @id @unique
   email String @unique
+  File File[]
   }
+
+enum UploadStatus {
+  PENDING
+  PROCESSING
+  FAILED
+  SUCCESS
+}
+
+model File {
+  id        String @id @unique
+  name      String
+  url       String
+  key       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+  uploadStatus UploadStatus @default(PENDING)
+
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+}

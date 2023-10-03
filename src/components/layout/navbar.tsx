@@ -12,7 +12,7 @@ export function Navbar() {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-purple-200">
           <Link href="/" className="z-40 flex font-semibold">
-            <span>Goover.</span>
+            <span>Goover</span>
           </Link>
           {/* todo: add mobile navbar */}
           <div className="hidden items-center space-x-4 sm:flex">
