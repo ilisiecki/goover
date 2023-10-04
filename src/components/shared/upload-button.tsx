@@ -1,8 +1,10 @@
 "use client";
-
+import Dropzone from "react-dropzone";
 import { useState } from "react";
+
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { UploadDropZone } from "@/components/shared/upload-drop-zone";
 
 export function UploadButton() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -23,7 +25,9 @@ export function UploadButton() {
       >
         <Button>Upload PDF</Button>
       </DialogTrigger>
-      <DialogContent>Constent</DialogContent>
+      <DialogContent>
+        <UploadDropZone />
+      </DialogContent>
     </Dialog>
   );
 }

@@ -6,6 +6,8 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
 
+import { Toaster, toast } from "sonner";
+
 import "react-loading-skeleton/dist/skeleton.css";
 import "./globals.css";
 
@@ -32,6 +34,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Toaster position="bottom-right" closeButton richColors />
         </body>
       </Providers>
     </html>
