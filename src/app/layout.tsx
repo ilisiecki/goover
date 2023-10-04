@@ -9,6 +9,7 @@ import { Providers } from "@/components/providers";
 import { Toaster, toast } from "sonner";
 
 import "react-loading-skeleton/dist/skeleton.css";
+import "simplebar-react/dist/simplebar.min.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
