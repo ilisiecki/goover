@@ -1,5 +1,4 @@
 "use client";
-import Dropzone from "react-dropzone";
 import { useState } from "react";
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
