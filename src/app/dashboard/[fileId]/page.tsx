@@ -1,5 +1,5 @@
-import { ChatWrapper } from "@/components/shared/chat-wrapper";
-import { PdfRender } from "@/components/shared/pdf-render";
+import { ChatWrapper } from "@/components/shared/chat/chat-wrapper";
+import { PdfRender } from "@/components/shared/pdf/pdf-render";
 import { db } from "@/db";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { notFound, redirect } from "next/navigation";
@@ -31,11 +31,11 @@ export default async function DashboardFieldIdPage({
       <div className="mx-auto w-full max-w-8xl grow lg:flex xl:px-2">
         <div className="flex-1 xl:flex">
           <div className="px-4 py-6 sm:px-6 lg:pl-8 xl:flex-1 xl:pl-6">
-            <PdfRender url={file.url}/>
+            <PdfRender url={file.url} />
           </div>
         </div>
         <div className="flex-[0.75] shrink-0 border-t border-gray-200 lg:w-96 lg:border-l lg:border-t-0">
-          <ChatWrapper />
+          <ChatWrapper fileId={file.id} />
         </div>
       </div>
     </div>
